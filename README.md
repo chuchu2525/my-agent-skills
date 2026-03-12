@@ -57,3 +57,7 @@ Suggested workflow:
 2. 秘匿情報や環境依存の内容がないか確認する
 3. 公開してよい内容だけをこのリポジトリへコピーする
 4. このリポジトリから commit / publish する
+
+PR protection test note:
+
+- Added a documentation-only change to verify `main` branch protection with `CODEOWNERS`.
