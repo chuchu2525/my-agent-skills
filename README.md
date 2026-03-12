@@ -1,5 +1,11 @@
 # my-agent-skills
 
+## 注意点(Caution)
+
+**Please use this repository at your own risk. You are responsible for evaluating and judging any security risks or other potential issues associated with using these skills.**
+
+**このリポジトリは自己責任で活用してください。セキュリティリスクやその他の潜在的な問題については、ご自身で評価・判断してください。**
+
 ## English
 
 This repository stores publishable copies of my local agent skills.
