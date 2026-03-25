@@ -1,65 +1,8 @@
 # my-agent-skills
 
-## 注意点(Caution)
-
-**Please use this repository at your own risk. You are responsible for evaluating and judging any security risks or other potential issues associated with using these skills.**
+## 注意点
 
 **このリポジトリは自己責任で活用してください。セキュリティリスクやその他の潜在的な問題については、ご自身で評価・判断してください。**
-
-## English
-
-This repository stores publishable copies of my local agent skills.
-
-The local source of truth is:
-
-- `~/.agents/skills`
-
-This repository is a curated copy for sharing and publishing.
-Before publishing, review the local skills and copy only the content that is safe to share.
-
-Current skills:
-
-- `find-skills`
-- `import-local-skills`
-- `slide-reviewer`
-
-Notes:
-
-- Do not assume everything under `~/.agents` is safe to publish.
-- Review each skill before copying it here.
-- Keep private prompts, secrets, local paths, logs, and temporary files out of this repository.
-
-Suggested workflow:
-
-1. Edit skills locally under `~/.agents/skills`.
-2. Review the contents for private or environment-specific information.
-3. Copy the publishable version into this repository.
-4. Commit and publish from this repository.
-
-### Importing local skills into this repository
-
-Use `import-local-skills` when you want to inspect local skills under `~/.agents/skills`
-and selectively copy them into this repository.
-
-List candidates:
-
-```bash
-python3 skills/import-local-skills/scripts/import_local_skills.py --list
-```
-
-Copy selected skills:
-
-```bash
-python3 skills/import-local-skills/scripts/import_local_skills.py --copy slides walica
-```
-
-Overwrite existing copied skills only after confirmation:
-
-```bash
-python3 skills/import-local-skills/scripts/import_local_skills.py --copy find-skills --overwrite
-```
-
-## 日本語
 
 このリポジトリは、ローカルで使っている agent skills のうち、公開してよいものを置くためのリポジトリです。
 
