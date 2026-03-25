@@ -1,0 +1,23 @@
+{
+  "skill_name": "walica",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "walicaに昨日の夕食代3000円を追加して。払ったのは田中さんで、参加者は全員。グループはhttps://walica.jp/group/01KKDW1QFKRDX0B5A4CYB5CE0D",
+      "expected_output": "URLをWALICA_GROUP_URLとして記憶し確認を取る。実行モード（headless/headed）を確認する。不足情報（参加者一覧）を確認する。walica_runner.jsのadd_expenseアクションを組み立てて実行する。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "walicaの支出を確認して、コンビニの金額を500円から600円に修正して",
+      "expected_output": "以前記憶したURLの確認を取る。list_expensesで一覧を取得してユーザーに見せる。対象支出を確認してedit_expenseで修正を実行する。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "walicaのグループに山田さんを追加したい",
+      "expected_output": "以前記憶したURLの確認を取る。add_memberアクションで山田さんをメンバーに追加する。",
+      "files": []
+    }
+  ]
+}
