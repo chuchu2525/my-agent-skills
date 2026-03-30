@@ -13,11 +13,11 @@ The local source of truth is:
 This repository is a curated copy for sharing and publishing.
 Before publishing, review the local skills and copy only the content that is safe to share.
 
-Current skills:
+See the `skills/` directory for the full list of available skills.
+For example:
 
-- `find-skills`
-- `import-local-skills`
-- `slide-reviewer`
+- `import-local-skills` — copy local skills into this repository
+- `slide-reviewer` — review business presentation slides
 
 Notes:
 

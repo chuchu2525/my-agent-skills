@@ -13,11 +13,11 @@
 このリポジトリは共有・公開用のコピー置き場です。
 公開前には `~/.agents` 側の内容を確認し、公開してよいものだけをここにコピーします。
 
-現在入っている skills:
+収録している skills は `skills/` ディレクトリを参照してください。
+例えば以下のようなものがあります。
 
-- `find-skills`
-- `import-local-skills`
-- `slide-reviewer`
+- `import-local-skills` — ローカルのスキルをこのリポジトリへ取り込む
+- `slide-reviewer` — ビジネスプレゼンのスライドをレビューする
 
 注意:
 
