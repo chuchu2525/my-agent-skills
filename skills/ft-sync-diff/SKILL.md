@@ -1,6 +1,6 @@
 ---
 name: ft-sync-diff
-description: Field Theory CLIでXブックマークを同期し、前回との差分を検知し、差分があった場合の次アクションをユーザーに確認する。ft sync運用、bookmarks.jsonl比較、Obsidian連携前段の自動化を行うときに使う。
+description: Field Theory CLIでXブックマークを同期し、bookmarks.jsonl の前後比較で新規ブックマーク差分を検知して、次アクションを確認する。ft sync、差分確認、new_ids.txt 作成、説明Markdown作成前の入口、Obsidian連携の開始時に使う。
 ---
 
 # FT Sync Diff
@@ -45,8 +45,8 @@ ft path
 ```bash
 mkdir -p .cache
 python - <<'PY'
-import json, os, pathlib
-data_dir = pathlib.Path(os.environ["FT_DATA_DIR"])
+import json, pathlib
+data_dir = pathlib.Path.home() / "Documents/obsidian/obsidian/ft-bookmarks"
 src = data_dir / "bookmarks.jsonl"
 dst = pathlib.Path(".cache/before_ids.txt")
 ids = []
@@ -76,8 +76,8 @@ ft sync
 
 ```bash
 python - <<'PY'
-import json, os, pathlib
-data_dir = pathlib.Path(os.environ["FT_DATA_DIR"])
+import json, pathlib
+data_dir = pathlib.Path.home() / "Documents/obsidian/obsidian/ft-bookmarks"
 src = data_dir / "bookmarks.jsonl"
 after = pathlib.Path(".cache/after_ids.txt")
 newf = pathlib.Path(".cache/new_ids.txt")
@@ -120,9 +120,10 @@ PY
 - 先頭数件のID
 - `.cache/new_ids.txt` の保存先
 
-そのうえで、次に何をしたいかを必ず確認する。確認項目は次のいずれか。
+そのうえで、次に何をしたいかを必ず確認する。既定のおすすめは「説明の Markdown を作る」。
+確認項目は次のいずれか。
 
-1. 説明の Markdown を作りたい
+1. おすすめ: 説明の Markdown を作りたい
 2. その内容をもとに自分で実践してみたい
 3. いまは差分だけ確認したい
 
@@ -133,7 +134,7 @@ PY
 差分IDは `.cache/new_ids.txt` に保存しました。
 
 次に何をしますか？
-1. 説明のMarkdownを作る
+1. おすすめ: 説明のMarkdownを作る
 2. この差分をもとに自分で実践する
 3. いまは差分確認だけにする
 ```

@@ -1,6 +1,6 @@
 ---
 name: ft-explain-bookmarks
-description: Xブックマーク差分から説明Markdownを生成する。new_ids.txt、bookmarks.jsonl、関連ブックマーク探索、Web調査、Obsidianノート化を行うときに使う。
+description: ft-sync-diff で作成した new_ids.txt と bookmarks.jsonl をもとに、新規Xブックマークの説明MarkdownをObsidian向けに生成する。要約、なぜ重要か、関連ブックマーク、Web調査の関連リンク、次アクションを含むノートを作るときに使う。
 ---
 
 # FT Explain Bookmarks
